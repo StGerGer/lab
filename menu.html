@@ -1,0 +1,22 @@
+<div id="sideMenu">
+    <div class="center">
+        <a href="#" id="logo" class="center no-decoration">The Lab</a>
+    </div>
+    <div class="vertical-menu">
+        <h2 class="header">Experiments</h2>
+
+        <ul class="menu-options">
+            <li ng-repeat="experiment in experiments">
+                <a href="#" ng-click="goToExperiment(experiment.shortname)">{{experiment.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="tile-view">
+        <a class="tile no-decoration" ng-repeat="experiment in experiments" target="_self" ng-href="/experiment.html?e={{experiment.shortname}}">
+            <img src="http://via.placeholder.com/200x150/FFF">
+            <span class="title">{{experiment.name}}</span>
+        </a>
+    </div>
+</div>
